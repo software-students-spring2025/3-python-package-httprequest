@@ -12,6 +12,9 @@ jobs:
       matrix:
         python-version: ["3.9", "3.11"]
     steps:
+      - name: pipfile lock
+        run: |
+        pipenv lock
       - uses: actions/checkout@v4
       - name: Install Python, pipenv and Pipfile packages
         uses: kojoru/prepare-pipenv@v1
