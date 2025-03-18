@@ -45,11 +45,11 @@ fortune = random_fortune(topic="career", mood="sarcastic")
 print(fortune)
 “Not writing bugs tonight only means writing double the bugs tomorrow.”
 ```
-See more examples in the ![example program](https://github.com/software-students-spring2025/3-python-package-httprequest/blob/main/src/chucklepy/example.py).
+See more examples in the [example program](https://github.com/software-students-spring2025/3-python-package-httprequest/blob/main/src/chucklepy/example.py).
 
 ## PyPI package link
 
-![Visit and try our fun package]()
+[Visit and try our fun package]()
 ## Contributing to ChucklePy  
 We love contributions! Here’s how you can set up the project locally:
 
