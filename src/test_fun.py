@@ -24,7 +24,7 @@ def test_comedic_insult_maze():
     assert "maze" in comedic_insult("Bob", severity=2)
 
 def test_comedic_insult_time_travelers():
-    assert "time travelers" in comedic_insult("Charlie", severity=3) 
+    assert "time travelers" in comedic_insult("Charlie", severity=3)
 
 def test_amuseify_text():
     assert isinstance(amuseify_text("Hello world", style="emoji"), str)
