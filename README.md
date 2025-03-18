@@ -4,7 +4,7 @@
 
 ##  What is ChucklePy?
 **ChucklePy** is a fun Python package designed to bring humor to developers’ lives.  
-With puns, comedic insults, text amusement, and random fortunes, it keeps coding interesting.  
+With puns, comedic insults, text amusement, and random fortunes, it keeps coding entertaining.  
 
 ## Installation
 Install ChucklePy directly from PyPI:
