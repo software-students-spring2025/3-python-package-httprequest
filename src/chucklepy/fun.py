@@ -26,7 +26,7 @@ def generate_pun(category: str = "general", length: str = "short") -> str:
         "Debugging: removing needles from the haystack.",
         "Real programmers count from 0, not 1.",
         "I tried to write a logic for 'clean code,' but ironically it turned into spaghetti.",
-        "In theory, there’s no difference between theory and practice. In practice, there is."
+        "In theory, there's no difference between theory and practice. In practice, there is."
     ]
 
     if category == "general":
@@ -55,7 +55,7 @@ def generate_pun(category: str = "general", length: str = "short") -> str:
 
 def comedic_insult(name: str, severity: int = 1) -> str:
     if severity == 1:
-        return f"{name}, you’re so optimistic you’d treat a 404 error like a fresh start!"
+        return f"{name}, you're so optimistic you'd treat a 404 error like a fresh start!"
     elif severity == 2:
         return (f"{name}, your code is like a maze — I've gone in circles three times "
                 "and I'm still nowhere near an exit!")
@@ -136,7 +136,6 @@ def random_fortune(topic: str = "life", mood: str = "positive") -> str:
             "Self-care isn't selfish—it's essential."
         ]
     }
-
     SARCASTIC_FORTUNES = {
         "life": [
             "Life is all about stepping into pitfalls. Miss a few, and it's not really complete.",
