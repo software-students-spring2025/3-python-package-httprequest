@@ -1,5 +1,8 @@
 import re
-from fun import (
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../')))
+from chucklepy.fun import (
     generate_pun,
     comedic_insult,
     amuseify_text,
