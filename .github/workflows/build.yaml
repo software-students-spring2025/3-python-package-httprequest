@@ -12,21 +12,28 @@ jobs:
       matrix:
         python-version: ["3.9", "3.11"]
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: Install Python, pipenv, and dependencies
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Pipenv
+        run: pip install pipenv
+
+      - name: Install Dependencies
         run: |
-          pip install pipenv
+          pipenv --python $(command -v python)
           pipenv install --dev
-          pipenv lock
+          pipenv lock 
 
       - name: Verify Virtual Environment
-        run: |
-          pipenv --venv
+        run: pipenv --venv
 
       - name: Install Project in Editable Mode
-        run: |
-          pipenv install -e .
+        run: pipenv install -e .
 
       - name: Test with pytest
         run: |
