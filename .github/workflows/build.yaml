@@ -12,19 +12,23 @@ jobs:
       matrix:
         python-version: ["3.9", "3.11"]
     steps:
-      - name: pipfile lock
-        run: |
-        pipenv lock
       - uses: actions/checkout@v4
-      - name: Install Python, pipenv and Pipfile packages
-        uses: kojoru/prepare-pipenv@v1
-        with:
-          python-version: ${{ matrix.python-version }}
-      - name: Turn on 'editable' mode
+
+      - name: Install Python, pipenv, and dependencies
+        run: |
+          pip install pipenv
+          pipenv install --dev
+          pipenv lock
+
+      - name: Verify Virtual Environment
+        run: |
+          pipenv --venv
+
+      - name: Install Project in Editable Mode
         run: |
           pipenv install -e .
+
       - name: Test with pytest
         run: |
           pipenv install pytest
-          pipenv --venv
           pipenv run python -m pytest
