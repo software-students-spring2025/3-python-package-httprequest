@@ -1,10 +1,12 @@
+[![chucklepy](https://github.com/software-students-spring2025/3-python-package-httprequest/actions/workflows/build.yaml/badge.svg?event=pull_request)](https://github.com/software-students-spring2025/3-python-package-httprequest/actions/workflows/build.yaml)
+
 # Python Package Exercise
 
 # ChucklePy - A Fun Python Package
 
 ##  What is ChucklePy?
 **ChucklePy** is a fun Python package designed to bring humor to developers’ lives.  
-With puns, comedic insults, text amusement, and random fortunes, it keeps coding entertaining.  
+With puns, comedic insults, text amusement, and random fortunes, it keeps coding interesting.  
 
 ## Installation
 Install ChucklePy directly from PyPI:
@@ -48,6 +50,7 @@ print(fortune)
 See more examples in the [example program](https://github.com/software-students-spring2025/3-python-package-httprequest/blob/main/src/chucklepy/example.py).
 
 ## PyPI package link
+[Visit Website](https://pypi.org/project/chucklepy/0.1.0/)
 
 [Visit and try our fun package]()
 ## Contributing to ChucklePy  
@@ -70,7 +73,7 @@ pipenv run pytest
 pytest tests
 ```
 - Build and Install the Package Locally
-```bash
+```bash 
 pipenv run python -m build
 pip install dist/chucklepy-*.whl
 ```
