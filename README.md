@@ -50,7 +50,7 @@ print(fortune)
 See more examples in the [example program](https://github.com/software-students-spring2025/3-python-package-httprequest/blob/main/src/chucklepy/example.py).
 
 ## PyPI package link
-[Visit Website](https://pypi.org/project/chucklepy/0.1.0/)
+[Visit Website](https://pypi.org/project/chucklepy/0.1.1/)
 
 [Visit and try our fun package]()
 ## Contributing to ChucklePy  
