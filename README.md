@@ -73,7 +73,7 @@ pipenv run pytest
 pytest tests
 ```
 - Build and Install the Package Locally
-```bash
+```bash 
 pipenv run python -m build
 pip install dist/chucklepy-*.whl
 ```
