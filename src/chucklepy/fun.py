@@ -81,11 +81,14 @@ def amuseify_text(text: str, style: str = "random") -> str:
 
 
 def _insert_emojis(text: str) -> str:
-    EMOJIS = ["😂", "🤣", "😜", "🤪", "🙃", "😊", "😎", "😫", "🤯", "😈", "👾"]
+   
+    emojis = ["😂", "🤣", "😊", "😜", "🤪", "😛", "😎", "😏", "😈", "👾"]
     words = text.split()
-    for i in range(0, len(words), 2):
-        words[i] += random.choice(EMOJIS)
-    return " ".join(words)
+    
+    for index in range(0, len(words), 2):  
+        words[index] += random.choice(emojis) 
+    
+    return " ".join(words)  
 
 
 def _to_leetspeak(text: str) -> str:
