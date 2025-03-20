@@ -54,7 +54,7 @@ See more examples in the [example program](https://github.com/software-students-
 
 [Visit and try our fun package]()
 ## Contributing to ChucklePy  
-We love contributions! Here’s how you can set up the project locally:
+We love contributions! Here’s how you can set up the project locally!
 
 ### Clone the Repository
 ```bash
