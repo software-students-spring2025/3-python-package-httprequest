@@ -1,6 +1,10 @@
 import re
 import sys
 import os
+
+# Adjusting the system path to include the parent directory
+# This ensures that the chucklepy package can be imported correctly
+
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../')))
 from chucklepy.fun import (
     generate_pun,
@@ -9,7 +13,20 @@ from chucklepy.fun import (
     random_fortune
 )
 
+# ------------------------------
+# How to Run These Tests:
+# ------------------------------
+# - Ensure you have `pytest` installed: pip install pytest
+# - Run the tests using: pytest test_fun.py
+# - To run a single test: pytest test_fun.py -k test_generate_pun_basic
+# - If using unittest instead of pytest, run: python -m unittest test_fun.py
+# ------------------------------
 
+# ------------------------------
+# Tests for generate_pun function
+# ------------------------------
+
+# Testing generate_pun functionality
 def test_generate_pun1():
     assert generate_pun()
 
@@ -19,6 +36,7 @@ def test_generate_pun2():
 def test_generate_pun3():
     assert isinstance(generate_pun(), str)
 
+# Testing comedic_insult functionality
 
 def test_comedic_insult_optimistic():
     assert "optimistic" in comedic_insult("Alice", severity=1)
@@ -29,6 +47,8 @@ def test_comedic_insult_maze():
 def test_comedic_insult_time_travelers():
     assert "time travelers" in comedic_insult("Charlie", severity=3)
 
+# Testing amuseify_text functionality
+
 def test_amuseify_text():
     assert isinstance(amuseify_text("Hello world", style="emoji"), str)
 
@@ -37,6 +57,8 @@ def test_amuseify_text_emoji():
 
 def test_amuseify_text_leet():
     assert re.search(r"[413705]", amuseify_text("Hello world", style="leet"))
+
+# Testing random_fortune functionality
 
 def test_random_fortune():
     assert random_fortune(topic="life", mood="positive") != random_fortune(topic="career", mood="sarcastic")
@@ -96,22 +118,20 @@ def test_amuseify_text_empty():
     result = amuseify_text("", style="emoji")
     assert result == ""
 
-def test_random_fortune_valid():
+# Additional tests for random_fortune
+
+def test_random_fortune_valid_case():
     result = random_fortune(topic="life", mood="positive")
-    assert isinstance(result, str)
-    assert len(result) > 0
+    assert isinstance(result, str) and len(result) > 0
 
-def test_random_fortune_invalid_topic():
+def test_random_fortune_with_unknown_topic():
     result = random_fortune(topic="unknown", mood="positive")
-    assert isinstance(result, str)
-    assert len(result) > 0
+    assert isinstance(result, str) and len(result) > 0
 
-def test_random_fortune_invalid_mood():
+def test_random_fortune_with_unknown_mood():
     result = random_fortune(topic="career", mood="unknown")
-    assert isinstance(result, str)
-    assert len(result) > 0
+    assert isinstance(result, str) and len(result) > 0
 
-def test_random_fortune_edge_case():
+def test_random_fortune_with_empty_topic():
     result = random_fortune(topic="", mood="sarcastic")
-    assert isinstance(result, str)
-    assert len(result) > 0
+    assert isinstance(result, str) and len(result) > 0
